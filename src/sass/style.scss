@@ -105,6 +105,10 @@ body {
       font-size: 35px;
       font-weight: 700;
     }
+    &__subtext {
+      @include text;
+      
+    }
   }
   .es-icons{
     text-align: center;
@@ -147,6 +151,61 @@ body {
       font-weight: 400;
     }
   }
+  .es-steam {
+    background-color: #000;
+    margin: 40px auto;
+    width: 100%;
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &__subtitle {
+      @include text;
+      padding: 20px;
+      color: #fff;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    &__title {
+      @include text;
+      padding: 20px;
+      color: #fff;
+      text-align: left;
+      text-transform: uppercase;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    &__text {
+      @include text;
+      padding: 20px;
+      color: #fff;
+      text-align: left;
+      font-size: 20px;
+    }
+    &__image {
+      @include img;
+      padding: 0 20px;
+    }
+  }
+}
+@media screen and (min-width: 924px) {
+  .es-steam {
+    &__wrapper {
+      flex-wrap: nowrap !important;
+    }
+    &__left {
+      width: 50%;
+    }
+    &__right {
+      width: 50%;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+
 }
 
 @keyframes slideright {
