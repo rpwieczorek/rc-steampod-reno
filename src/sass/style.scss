@@ -75,6 +75,8 @@ body {
     &__content {
       text-align: left;
       padding: 40px;
+      opacity: 0;
+      animation: slideright 0.6s 0.3s forwards;
     }
     &__images{
       @include img;
@@ -86,6 +88,8 @@ body {
       position: relative;
       margin: 0 0 0 auto;
       padding-left: 20px;
+      opacity: 0;
+      animation: slideleft 0.6s 0.3s forwards;
     }
     &__title{
       @include text;
@@ -149,7 +153,10 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-
+      &:hover .es-icons__image{
+        transition: all 0.6s;
+        transform: translateY(-10px);
+      }
     }
     &__image {
       @include img;
