@@ -82,10 +82,10 @@ body {
       padding: 15px 0;
     }
     &__packshot{
-      position: absolute;
-      right: 0;
-      bottom: -100px;
-      overflow: visible;
+      @include img;
+      position: relative;
+      margin: 0 0 0 auto;
+      padding-left: 20px;
     }
     &__title{
       @include text;
@@ -93,6 +93,16 @@ body {
       text-transform: uppercase;
       font-size: 35px;
       font-weight: 700;
+    }
+  }
+  @media screen and (min-width: 870px) {
+    .es-kv {
+      &__packshot {
+        position: absolute;
+        right: 0;
+        bottom: -100px;
+        overflow: visible;
+      }
     }
   }
   .es-title{
@@ -162,7 +172,7 @@ body {
   }
   .es-steam {
     background-color: #000;
-    margin: 40px auto;
+    margin: 40px auto 0;
     width: 100%;
     &__wrapper {
       display: flex;
@@ -197,6 +207,56 @@ body {
     &__image {
       @include img;
       padding: 0 20px;
+    }
+  }
+  .es-care {
+    background-color: $light;
+    &__wrapper {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    &__title{
+      @include text;
+      text-align: left;
+      padding: 20px;
+      text-transform: uppercase;
+      font-size: 35px;
+      font-weight: 700;
+    }
+    &__text {
+      @include text;
+      padding: 20px;
+      text-align: left;
+      font-size: 18px;
+      font-family: 200;
+    }
+    &__left {
+      padding: 20px;
+    }
+    &__right {
+      padding: 20px 0 20px 20px;
+    }
+    &__image {
+      @include img;
+      margin: 0 0 0 auto;
+      padding: 20px 0 40px 20px;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    .es-care {
+      &__wrapper {
+        flex-wrap: nowrap !important;
+      }
+      &__left {
+        width: 45%;
+      }
+      &__right {
+        width: 55%;
+        & .es-care__title, .es-care__text {
+          padding-left: 90px;
+        }
+      }
     }
   }
   .es-ba {
@@ -336,7 +396,6 @@ body {
       padding-right: 50px;
     }
   }
-
 }
 
 @keyframes slideright {
